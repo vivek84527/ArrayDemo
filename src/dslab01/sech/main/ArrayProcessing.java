@@ -1,5 +1,7 @@
 package dslab01.sech.main;
 
+import java.util.Scanner;
+
 public class ArrayProcessing {
     public static void main(String[] args) {
         // create an array to store integer
@@ -50,8 +52,33 @@ public class ArrayProcessing {
 
 
         // user initialization of array using scanner class
-        
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println();
+        System.out.println("Enter the 10 integers");
+        for (int i = 0; i < arrInt.length; i++) {
+            arrInt[i]=sc.nextInt();
+
+        }
+        System.out.println("Array using Scanner Array");
+        System.out.println("Printing array with intialize with user input");
+        for(int i=0;i<arrInt.length;i++) {
+            System.out.print(arrInt[i]);
+            System.out.print(",");
+        }
+        System.out.println();
+
 
         // sum and average of aal element
+        double sum=0;
+        for (int i = 0; i < arrInt.length; i++) {
+            sum=sum+arrInt[i];
+
+        }
+
+        System.out.println("The Sum of the given array"+sum);
+
+        double avg = (double)sum/10;
+        System.out.println("The average values " + "" +avg);
     }
 }
